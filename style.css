@@ -1,0 +1,373 @@
+/* :root {
+  --canvas: #e8edf7;
+  --plate: #f3f6fd;
+  --plate-2: #eaf0fa;
+  --sunk: #dce4f3;
+  --ink: #232d3c;
+  --ink-2: #67758b;
+  --jade: #7ccfb0;
+  --jade-ink: #2a7a62;
+  --coral: #e8735c;
+  --sky: #b7d4f5;
+  --line: rgba(35, 45, 60, 0.09);
+  --bar: 92px;
+  --r: 28px;
+  --r-sm: 18px;
+  --shell: 1180px;
+  --ease: cubic-bezier(0.19, 0.86, 0.22, 1);
+  --clay:
+    0 22px 38px -20px rgba(35, 45, 60, 0.36),
+    0 8px 16px -10px rgba(35, 45, 60, 0.18),
+    inset 2px 3px 4px 0 rgba(255, 255, 255, 0.95),
+    inset -3px -5px 9px 0 rgba(35, 45, 60, 0.09);
+  --clay-sm:
+    0 12px 22px -13px rgba(35, 45, 60, 0.34),
+    inset 2px 2px 3px 0 rgba(255, 255, 255, 0.92),
+    inset -2px -3px 6px 0 rgba(35, 45, 60, 0.1);
+  --well:
+    inset 4px 5px 11px -3px rgba(35, 45, 60, 0.22),
+    inset -2px -3px 6px 0 rgba(255, 255, 255, 0.9);
+  
+  --gloss: linear-gradient(
+    180deg,
+    #fefeff 0%,
+    #f5f8fd 46%,
+    #e9effa 46.01%,
+    #dee7f6 100%
+  );
+  
+  --gloss-plate: linear-gradient(
+    180deg,
+    #fdfeff 0%,
+    #f7f9fe 46%,
+    #f1f5fc 46.01%,
+    #eaf0f9 100%
+  );
+  --gloss-down: linear-gradient(
+    180deg,
+    #e1e9f6 0%,
+    #eaf0fa 54%,
+    #f5f8fd 54.01%,
+    #fcfdff 100%
+  );
+  --gloss-jade: linear-gradient(
+    180deg,
+    #b2e7d2 0%,
+    #90d9bd 46%,
+    #6bc5a5 46.01%,
+    #52b492 100%
+  );
+  --gloss-jade-down: linear-gradient(
+    180deg,
+    #4fb08f 0%,
+    #63c0a0 54%,
+    #89d6b9 54.01%,
+    #aae3cd 100%
+  );
+  --lip:
+    inset 0 1px 0 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 0 rgba(35, 45, 60, 0.12);
+  --lip-jade:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 0 rgba(16, 72, 56, 0.4);
+  --lift:
+    0 10px 18px -11px rgba(35, 45, 60, 0.6),
+    0 2px 4px -2px rgba(35, 45, 60, 0.16);
+  --lift-hi:
+    0 20px 30px -15px rgba(35, 45, 60, 0.6),
+    0 5px 9px -4px rgba(35, 45, 60, 0.2);
+  --lift-jade:
+    0 12px 20px -11px rgba(42, 122, 98, 0.9),
+    0 2px 4px -2px rgba(42, 122, 98, 0.3);
+  --lift-jade-hi:
+    0 22px 32px -15px rgba(42, 122, 98, 0.95),
+    0 5px 9px -4px rgba(42, 122, 98, 0.38);
+  --sheen: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 36%,
+    rgba(255, 255, 255, 0.92) 48%,
+    rgba(255, 255, 255, 0) 61%
+  );
+  --sheen-soft: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 36%,
+    rgba(255, 255, 255, 0.55) 48%,
+    rgba(255, 255, 255, 0) 61%
+  );
+  --sink:
+    0 1px 2px -1px rgba(35, 45, 60, 0.3),
+    inset 0 2px 5px 0 rgba(35, 45, 60, 0.2);
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: "Albert Sans", system-ui, sans-serif;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(
+      48vw 40vw at 12% 6%,
+      rgba(183, 212, 245, 0.55),
+      transparent 62%
+    ),
+    radial-gradient(
+      40vw 36vw at 88% 22%,
+      rgba(124, 207, 176, 0.34),
+      transparent 64%
+    ),
+    radial-gradient(
+      52vw 44vw at 60% 96%,
+      rgba(232, 115, 92, 0.14),
+      transparent 66%
+    );
+}
+
+.nav-links {
+  display: flex;
+  margin-top: 34px;
+  align-items: center;
+  gap: 18px;
+  padding: 21px 1px 21px 2px;
+  width: 1200px;
+  justify-self: center;
+  border-radius: 99px;
+  background: linear-gradient(
+    180deg,
+    rgba(254, 254, 255, 0.94) 0%,
+    rgba(244, 247, 253, 0.92) 46%,
+    rgba(232, 238, 250, 0.9) 46.01%,
+    rgba(222, 231, 246, 0.9) 100%
+  );
+
+  backdrop-filter: blur(14px);
+  box-shadow: var(--lift), var(--lip);
+  transition:
+    box-shadow 0.3s var(--ease),
+    transform 0.3s var(--ease);
+  justify-content: space-between;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 27px;
+
+  padding-right: 22px;
+}
+.links a {
+  color: var(--ink-2);
+  text-decoration: none;
+
+  list-style: none;
+}
+.celadon {
+  padding-left: 16px;
+  text-decoration: none;
+  list-style: none;
+}
+.celadon a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--ink);
+  font-size: 23px;
+  font-weight: 500;
+}
+.new-link {
+  display: flex;
+  gap: 27px;
+  margin-top: 11px;
+}
+.startBtn {
+  padding: 14px 20px;
+  border-radius: 99px;
+  background-size:
+    240% 100%,
+    100% 100%;
+  background-position:
+    -135% 0,
+    0 0;
+  background-repeat: no-repeat;
+  background-image: var(--jade-ink), var(--jade-ink);
+
+  color: var(--ink);
+  box-shadow: var(--lift), var(--lip);
+
+  transition:
+    box-shadow 0.24s var(--ease),
+    transform 0.24s var(--ease),
+    background-image 0.16s linear,
+    background-position 0s;
+
+  font-weight: 500;
+  font-size: 15px;
+  border: none;
+}
+.top-bar {
+  padding: 13px 24px;
+  border-radius: 99px;
+  
+width: fit-content;
+  color: var(--ink);
+  box-shadow: var(--lift), var(--lip);
+
+  transition:
+    box-shadow 0.24s var(--ease),
+    transform 0.24s var(--ease),
+    background-image 0.16s linear,
+    background-position 0s;
+
+  font-weight: 500;
+  font-size: 15px;
+  border: none;
+} */
+/* ===== colors (same ones from the original code) ===== */
+/* ===== colors =====
+   I save my colors here once, then use them anywhere with var(--name) */
+:root {
+  --canvas: #e8edf7; /* page background */
+  --ink: #232d3c; /* dark text */
+  --grey: #67758b; /* grey text */
+  --green: #52b492; /* green buttons */
+}
+
+/* ===== page ===== */
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--ink);
+  /* soft background that goes from blue to light to green */
+  background: linear-gradient(to right, #d9e6f7, var(--canvas), #d3ebe2);
+}
+
+/* grey text (used for links and small text) */
+.grey-text {
+  color: var(--grey);
+}
+
+/* ===== white things: nav bar, white button, small pill ===== */
+.white-box {
+  /* white at the top, light blue at the bottom */
+  background: linear-gradient(white, #dee7f6);
+  box-shadow: 0 8px 15px rgba(35, 45, 60, 0.25);
+}
+
+/* ===== green button ===== */
+.green-btn {
+  /* light green at the top, darker green at the bottom */
+  background: linear-gradient(#b2e7d2, var(--green));
+  box-shadow: 0 8px 15px rgba(42, 122, 98, 0.4);
+  color: var(--ink);
+}
+
+/* ===== cards ===== */
+.card {
+  background: linear-gradient(white, #eaf0f9);
+  box-shadow: 0 15px 30px rgba(35, 45, 60, 0.2);
+}
+
+/* ===== progress bar ===== */
+.bar-track {
+  background: #dce4f3;
+  /* "inset" makes the shadow go inside, so it looks pushed in */
+  box-shadow: inset 2px 3px 6px rgba(35, 45, 60, 0.25);
+}
+.bar-fill {
+  background: linear-gradient(#b2e7d2, var(--green));
+}
+
+/* ===== small colored dots on the cards ===== */
+.dot-blue {
+  background: #b7d4f5;
+}
+.dot-red {
+  background: #e8735c;
+}
+.dot-green {
+  background: #7ccfb0;
+}
+.dot-yellow {
+  background: #e8b45c;
+}
+
+/* small label above each quote, like ZENDESK */
+.label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+/* makes text stand up and read from bottom to top */
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* the small note box inside the big card (slightly darker than the card) */
+.note {
+  background: #dde4f3;
+  box-shadow: inset 2px 3px 6px rgba(35, 45, 60, 0.15);
+}
+
+/* accordion */
+.accordion {
+  width: 65%;
+  margin: 0 auto;
+  padding: 30px;
+}
+.accordion .accordion-label {
+  text-align: center;
+  font-size: 14px;
+}
+.accordion .accordion-title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 50px;
+}
+.accordion .content-container {
+  background: linear-gradient(#ffffff, #eaf0f9);
+  border-radius: 20px;
+  padding: 10px 25px;
+  margin-bottom: 15px;
+}
+.accordion .content-container .question {
+  padding: 18px 0px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion .content-container .question::after {
+  content: "+";
+  position: absolute;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #dce4f3;
+}
+.accordion .content-container .answer {
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.accordion .content-container.active .answer {
+  height: 80px;
+}
+.accordion .content-container.active .question {
+  font-size: 18px;
+  transition: 0.5s;
+}
+.accordion .content-container.active .question::after {
+  content: "-";
+  font-size: 20px;
+  transition: 0.5s;
+}

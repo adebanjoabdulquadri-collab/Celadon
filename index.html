@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celadon</title>
+
+    <!-- font from google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- link css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!--  NAV  -->
+    <header class="sticky top-0 z-50 p-4">
+      <nav
+        class="white-box mx-auto flex max-w-5xl items-center justify-between rounded-full px-6 py-3"
+      >
+        <a href="" class="text-xl font-medium">Celadon</a>
+
+        <!--  hidden on MOBILE -->
+        <div
+          class="hidden items-center gap-8 md:flex justify-between relative left-36"
+        >
+          <a href="#features" class="grey-text">Features</a>
+          <a href="#how" class="grey-text">How it works</a>
+          <a href="#price" class="grey-text">Pricing</a>
+          <a href="#faq" class="grey-text">FAQ</a>sss
+          <a href="#start" class="green-btn rounded-full px-6 py-3"
+            >Start Free</a
+          >
+        </div>
+
+        <!-- MOBILE NAV BAR -->
+
+        <!-- for mobile screens -->
+        <!-- Mobile Toggle Button -->
+
+        <!-- class="rounded-full shadow-slate-400 md:shadow-none shadow-xl mt-8
+        md:mt-0" > -->
+        <div class="flex items-center justify-between p-4">
+          <button id="menuBtn" class="text-2xl md:hidden">☰</button>
+        </div>
+      </nav>
+      <!-- Mobile Dropdown Navigation -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden bg-[#fff] py-7 ml-13 h-full flex-col gap-13 text-center"
+      >
+        <span
+          class="flex flex-col relative bottom-5 gap-10 text-start mt-14 ml-24 text-xl font-semibold text-gray-800"
+        >
+          <p
+            class="text-sm font-semibold text-gray-800 relative top-6 opacity-45 text-md"
+          >
+            Menu
+          </p>
+          <a href="#features">features </a>
+          <a href="#how">How it works</a>
+          <a href="#price">Pricing</a>
+          <a href="#faq">FAQS</a></span
+        >
+      </div>
+    </header>
+
+    <!-- HERO-SECTION -->
+    <section class="flex flex-col items-center px-4 pt-8 text-center">
+      <!-- small pill -->
+      <div
+        class="white-box flex items-center gap-2 rounded-full px-3 py-2 text-sm"
+      >
+        <span class="green-btn rounded-full px-3 py-1 text-xs">New</span>
+        <span class="grey-text">Two-way sync with Linear</span>
+      </div>
+
+      <h1 class="mt-8 max-w-3xl text-5xl font-light md:text-8xl">
+        Feedback, finally shaped.
+      </h1>
+
+      <p class="grey-text mt-6 max-w-xl text-lg">
+        Celadon pulls customer feedback out of every channel it hides in and
+        groups it into the handful of themes your team can actually act on.
+      </p>
+
+      <!-- two buttons -->
+      <div class="mt-10 flex gap-4">
+        <button class="green-btn rounded-full px-6 py-4">
+          Start free trial
+        </button>
+        <button class="white-box rounded-full px-6 py-4">
+          See how it works
+        </button>
+      </div>
+
+      <p class="grey-text mt-6 text-sm">Free for 14 days. No card needed.</p>
+    </section>
+
+    <section
+      class="mx-auto mt-16 grid max-w-5xl gap-6 px-4 pb-20 md:grid-cols-3 md:items-center"
+    >
+      <!-- LEFT COLUMN -->
+      <div class="flex flex-col gap-16">
+        <div class="card rounded-3xl p-6">
+          <p class="label flex items-center gap-2">
+            <span class="dot-blue h-2 w-2 rounded-full"></span> Zendesk
+          </p>
+          <p class="grey-text mt-3">
+            "Any chance of a CSV export on the reports page?"
+          </p>
+        </div>
+
+        <!-- slack -->
+        <div class="card rounded-3xl p-6">
+          <p class="label flex items-center gap-2">
+            <span class="dot-green h-2 w-2 rounded-full"></span> Slack
+          </p>
+          <p class="grey-text mt-3">
+            "Third customer this week asking to get the data out."
+          </p>
+        </div>
+      </div>
+
+      <!--  big theme card -->
+      <div class="card rounded-3xl p-6">
+        <p class="label">Theme</p>
+        <h3 class="mt-4 text-2xl font-light">Get data out of Celadon</h3>
+
+        <!-- the green part is 72% wide -->
+        <div class="bar-track mt-5 h-3 rounded-full">
+          <div class="bar-fill h-3 w-[72%] rounded-full"></div>
+        </div>
+
+        <div class="grey-text mt-6 flex justify-between text-sm">
+          <span>Requests</span>
+          <span class="text-2xl text-black">218</span>
+        </div>
+        <div class="grey-text mt-4 flex justify-between text-sm">
+          <span>Accounts affected</span>
+          <span class="text-2xl text-black">34</span>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex flex-col gap-16">
+        <!-- sales call -->
+        <div class="card rounded-3xl p-6">
+          <p class="label flex items-center gap-2">
+            <span class="dot-red h-2 w-2 rounded-full"></span> Sales call
+          </p>
+          <p class="grey-text mt-3">
+            "They will not sign without letting finance pull the raw numbers."
+          </p>
+        </div>
+
+        <!-- app review -->
+        <div class="card rounded-3xl p-6">
+          <p class="label flex items-center gap-2">
+            <span class="dot-yellow h-2 w-2 rounded-full"></span> App review
+          </p>
+          <p class="grey-text mt-3">
+            "Great app, but my data feels stuck inside it."
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div
+        class="flex justify-center items-center flex-col mt-12 grey-text text-lg"
+      >
+        <div class=""><p>Shaping feedback at</p></div>
+        <div
+          class="md:flex md:justify-between grid grid-cols-2 items-center gap-7 ml-12 justify-center md:gap-20 mt-8"
+        >
+          <span>Northbeam</span>
+          <span>Halyard</span>
+          <span> Petrichor</span>
+          <span>Oxbow</span>
+          <span> Studio Marrow</span>
+          <span class="">Kelp</span>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="pt-28">
+      <div class="flex flex-col justify-center items-center">
+        <div class="text-[#2A7A62] md:text-lg text-md pb-6">
+          <p>What you get</p>
+        </div>
+        <div class="">
+          <h1
+            class="text-3xl md:text-5xl md:w-[500px] md:leading-[55px] w-[300px] flex flex-col items-center justify-center"
+          >
+            Six raw pieces, one <span>shaped workflow.</span>
+          </h1>
+        </div>
+        <div
+          class="mt-9 hidden md:flex flex-col justify-center items-center text-lg grey-text"
+        >
+          No more spreadsheet of quotes that nobody opens after the second
+          <span>week</span>.
+        </div>
+        <div
+          class="mt-9 md:hidden flex flex-col justify-center items-center text-lg grey-text"
+        >
+          No more spreadsheet of quotes that
+          <span>nobody opens after the second</span> <span>week</span>.
+        </div>
+        <div class="flex justify-center items-center grey-text text-sm pb-4">
+          Click a panel to open it.
+        </div>
+      </div>
+    </section>
+    <!-- Boxes container -->
+
+    <section class="mx-auto md:flex grid grid-rows-1 max-w-6xl gap-3 px-4">
+      <!-- BIG BOX -->
+      <!-- flex-1 = take all the leftover space -->
+      <div class="card flex-1 rounded-3xl md:h-[450px] md:w-full p-10">
+        <div class="green-btn h-14 w-14 rounded-2xl"></div>
+        <!-- icon square -->
+
+        <h3 class="mt-6 text-3xl font-light">One inbox for all of it</h3>
+        <!-- heading -->
+        <p class="grey-text mt-3 max-w-md">
+          Support tickets, sales notes, app store reviews and Slack threads land
+          in the same place, with the customer already attached.
+        </p>
+        <!-- paragraph -->
+
+        <!-- small note box inside -->
+        <div class="note mt-6 max-w-sm rounded-2xl p-4 text-sm">
+          Pulling from <b> nine sources </b>, including CSV drops and forwarded
+          email.
+        </div>
+      </div>
+
+      <div
+        class="card flex w-24 flex-col items-center justify-between rounded-4xl py-6"
+      >
+        <span class="dot-blue h-3 w-3 rounded-full"></span>
+        <p class="vertical-text grey-text">Themes, not tags</p>
+      </div>
+      <div
+        class="card flex w-24 flex-col items-center justify-between rounded-4xl py-6"
+      >
+        <span class="dot-blue h-3 w-3 rounded-full"></span>
+        <p class="vertical-text grey-text">Weighted by revenue</p>
+      </div>
+      <div
+        class="card flex w-24 flex-col items-center justify-between rounded-4xl py-6"
+      >
+        <span class="dot-blue h-3 w-3 rounded-full"></span>
+        <p class="vertical-text grey-text">Reply where it started</p>
+      </div>
+      <div
+        class="card flex w-24 flex-col items-center justify-between rounded-4xl py-6"
+      >
+        <span class="dot-blue h-3 w-3 rounded-full"></span>
+        <p class="vertical-text grey-text">A roadmap that links back</p>
+      </div>
+      <div
+        class="card flex w-24 flex-col items-center justify-between rounded-4xl py-6"
+      >
+        <span class="dot-blue h-3 w-3 rounded-full"></span>
+        <p class="vertical-text grey-text writing-mode:vertical-rl">
+          Fits your stack
+        </p>
+      </div>
+    </section>
+    <!-- the proccess -->
+
+    <section
+      id="how"
+      class="mx-auto mt-20 pt-28 max-w-5xl px-4 pb-24 text-center"
+    >
+      <p class="label green-text flex items-center justify-center gap-3">
+        <span class="small-line"></span> The process
+      </p>
+
+      <h2 class="mx-auto mt-4 max-w-xl text-4xl font-light md:text-6xl">
+        Three steps, then it runs itself.
+      </h2>
+
+      <div class="relative mt-16 grid gap-12 md:grid-cols-3">
+        <div
+          class="dotted-line absolute left-[17%] right-[17%] top-8 hidden md:block"
+        ></div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="white-box relative z-10 flex h-16 w-16 items-center justify-center rounded-full text-2xl font-light"
+          >
+            1
+          </div>
+          <h3 class="mt-6 text-xl font-light">Collect</h3>
+          <p class="grey-text mt-2 max-w-xs text-sm">
+            Connect your channels once. New feedback arrives every few minutes
+            with the customer already matched.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="white-box relative z-10 flex h-16 w-16 items-center justify-center rounded-full text-2xl font-light"
+          >
+            2
+          </div>
+          <h3 class="mt-6 text-xl font-light">Shape</h3>
+          <p class="grey-text mt-2 max-w-xs text-sm">
+            Similar requests gather into themes with a plain summary you can
+            rewrite in a sentence.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="white-box relative z-10 flex h-16 w-16 items-center justify-center rounded-full text-2xl font-light"
+          >
+            3
+          </div>
+          <h3 class="mt-6 text-xl font-light">Ship</h3>
+          <p class="grey-text mt-2 max-w-xs text-sm">
+            Push a theme to your tracker. Everyone who asked for it hears back
+            on the day it lands.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- connections section -->
+    <section class="mt-24">
+      <h1 class="flex justify-center"><span class=""></span> Connections</h1>
+
+      <h1
+        class="flex justify-self-center pb-8 pt-6 md:text-5xl text-3xl md:w-[453px] text-center items-center"
+      >
+        Plugs into the tools already open on your screen.
+      </h1>
+      <div class="flex flex-col gap-4">
+        <div
+          class="md:flex grid grid-cols-2 justify-between gap-2 pl-8 pr-7 md:pl-0 md:pr-0 md:justify-center items-center md:gap-2"
+        >
+          <div
+            class="card rounded-3xl w-26 p-2 flex justify-center text-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green w-2 h-2 rounded-full"></span> Linear
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-20 p-2 flex justify-center text-center items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> Jira
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-26 p-2 flex justify-center text-center items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> Zendesk
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-[120px] p-2 flex justify-center text-center items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> Intercom
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-20 p-2 text-center flex justify-center items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> Slack
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-24 p-2 flex jc text-center items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green w-2 h-2 rounded-sm"></span> HubSpot
+            </p>
+          </div>
+        </div>
+        <div
+          class="md:flex grid grid-cols-2 justify-between gap-2 pl-8 pr-7 md:pl-0 md:pr-0 md:justify-center items-center md:gap-2"
+        >
+          <div
+            class="card rounded-3xl w-24 p-2 flex justify-center text-center items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> Notion
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-20 p-2 flex justify-center text-center items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> Front
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-20 p-2 flex justify-center text-center items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> Gong
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-30 justify-center p-2 text-center flex items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> App store
+            </p>
+          </div>
+          <div
+            class="card rounded-3xl w-16 p-2 text-center flex justify-center text-xl text-[#232D3C] items-center"
+          >
+            <p class="label flex items-center gap-2">
+              <span class="dot-green h-2 w-2 rounded-full"></span> G2
+            </p>
+          </div>
+          <div class="card rounded-3xl w-20 p-2 text-center items-center">
+            <p class="label flex items-center gap-2 justify-self-center">
+              <span class="dot-green h-2 w-2 rounded-full"></span> Zapier
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="card flex-1 rounded-3xl p-20 flex justify-center items-center ml-6 mr-6 md:ml-16 md:mr-16 mt-20"
+    >
+      <div class="flex gap-8 md:flex-row flex-col justify-between">
+        <div
+          class="note md:h-36 md:w-9/12 w-[190px] h-44 md:gap-12 rounded-2xl flex justify-center flex-col items-center text-center"
+        >
+          <h1 class="flex justify-center text-5xl">94%</h1>
+          <p>of new feedback themed without a human</p>
+        </div>
+        <div
+          class="note md:h-36 md:w-9/12 w-[190px] h-44 md:gap-12 rounded-2xl flex justify-center flex-col items-center text-center"
+        >
+          <h1 class="flex text-center justify-center text-5xl">6 min</h1>
+          <p>from first connection to first theme</p>
+        </div>
+        <div
+          class="note md:h-36 md:w-9/12 w-[190px] h-44 md:gap-12 rounded-2xl gap-4 flex justify-center flex-col items-center text-center"
+        >
+          <h1 class="flex text-center justify-center text-5xl">1,800+</h1>
+          <p>product teams shaping feedback here</p>
+        </div>
+      </div>
+    </div>
+    <!--PRICING HEADING  -->
+    <section id="price" class="mx-auto max-w-3xl px-4 pt-28 text-center">
+      <p
+        class="flex items-center justify-center gap-3 text-xs font-medium uppercase tracking-widest text-emerald-700"
+      >
+        <span class="h-1.5 w-7 rounded-full bg-emerald-400"></span> Pricing
+      </p>
+
+      <h2 class="mt-4 text-4xl font-light text-slate-800 md:text-6xl">
+        Priced per workspace, not per seat.
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-md text-lg text-slate-500">
+        Invite everyone. Charging you for the teammate who reads once a month
+        never made sense.
+      </p>
+
+      <!-- monthly / yearly toggle (just looks like a switch, no javascript yet) -->
+      <div class="mt-8 flex items-center justify-center gap-4">
+        <span class="text-slate-800">Monthly</span>
+
+        <div
+          class="flex h-9 w-16 items-center rounded-full bg-slate-200 px-1 shadow-inner"
+        >
+          <div class="h-7 w-7 rounded-full bg-white shadow-md"></div>
+        </div>
+
+        <span class="text-slate-500">Yearly</span>
+
+        <span
+          class="rounded-full bg-linear-to-b from-emerald-200 to-emerald-500 px-3 py-1 text-xs font-medium text-slate-800 shadow-md"
+        >
+          Save 30%
+        </span>
+      </div>
+    </section>
+    <!-- PRICING CARDS -->
+    <section
+      class="mx-auto mt-12 grid max-w-6xl gap-6 px-4 pb-24 md:grid-cols-3"
+    >
+      <!-- SOLO card -->
+      <div
+        class="rounded-3xl bg-linear-to-b from-white to-slate-100 p-8 shadow-xl"
+      >
+        <p class="text-xs font-medium uppercase tracking-widest text-slate-500">
+          Solo
+        </p>
+
+        <p class="mt-8 flex items-end gap-2">
+          <span class="text-5xl font-light text-slate-800">$30</span>
+          <span class="pb-1 text-sm text-slate-500">per month</span>
+        </p>
+
+        <span
+          class="mt-5 inline-block rounded-full bg-slate-200 px-3 py-1 text-xs text-slate-500"
+        >
+          Billed monthly
+        </span>
+
+        <p class="mt-4 text-slate-500">
+          For one person keeping track of everything on their own.
+        </p>
+
+        <button
+          class="mt-8 w-full rounded-full bg-linear-to-b from-white to-slate-200 py-4 font-medium text-slate-800 shadow-lg"
+        >
+          Start free trial
+        </button>
+
+        <ul class="mt-8 flex flex-col gap-3 text-slate-500">
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Three channels connected
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Up to 500 feedback items a month
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Automatic theming
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Email support
+          </li>
+        </ul>
+      </div>
+
+      <!-- TEAM card (the most picked one) -->
+      <div
+        class="rounded-3xl bg-linear-to-b from-white to-emerald-50 p-8 shadow-xl"
+      >
+        <p
+          class="text-xs font-medium uppercase tracking-widest text-emerald-700"
+        >
+          Team, most picked
+        </p>
+
+        <p class="mt-8 flex items-end gap-2">
+          <span class="text-5xl font-light text-slate-800">$80</span>
+          <span class="pb-1 text-sm text-slate-500">per month</span>
+        </p>
+
+        <span
+          class="mt-5 inline-block rounded-full bg-slate-200 px-3 py-1 text-xs text-slate-500"
+        >
+          Billed monthly
+        </span>
+
+        <p class="mt-4 text-slate-500">
+          For a product team that needs the roadmap to trace back to real
+          people.
+        </p>
+
+        <!-- green button -->
+        <button
+          class="mt-8 w-full rounded-full bg-linear-to-b from-emerald-200 to-emerald-500 py-4 font-medium text-slate-800 shadow-lg"
+        >
+          Start free trial
+        </button>
+
+        <ul class="mt-8 flex flex-col gap-3 text-slate-500">
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Unlimited channels and seats
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Up to 8,000 feedback items a month
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Revenue weighting
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Two-way sync with Linear and Jira
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Loop closing from any channel
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="rounded-3xl bg-linear-to-b from-white to-slate-100 p-8 shadow-xl"
+      >
+        <p class="text-xs font-medium uppercase tracking-widest text-slate-500">
+          Scale
+        </p>
+
+        <p class="mt-8 flex items-end gap-2">
+          <span class="text-5xl font-light text-slate-800">$160</span>
+          <span class="pb-1 text-sm text-slate-500">per month</span>
+        </p>
+
+        <span
+          class="mt-5 inline-block rounded-full bg-slate-200 px-3 py-1 text-xs text-slate-500"
+        >
+          Billed monthly
+        </span>
+
+        <p class="mt-4 text-slate-500">
+          For several teams sharing one feedback pool without stepping on each
+          other.
+        </p>
+
+        <button
+          class="mt-8 w-full rounded-full bg-linear-to-b from-white to-slate-200 py-4 font-medium text-slate-800 shadow-lg"
+        >
+          Talk to us
+        </button>
+
+        <ul class="mt-8 flex flex-col gap-3 text-slate-500">
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Everything in Team
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Unlimited feedback items
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Separate boards per team
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            SSO and audit log
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400 text-xs text-white"
+              >✓</span
+            >
+            Shared Slack channel with us
+          </li>
+        </ul>
+      </div>
+      <!-- accordion section -->
+    </section>
+    <section
+      class="accordion md:flex hidden flex-col items-center justify-center gap-6 px-4 pb-24"
+    >
+      <div id="faq" class="accordion-label pt-32">QUESTIONS</div>
+      <div class="accordion-title">
+        <h1>Asked often enough to put here.</h1>
+      </div>
+      <!-- Question 1 -->
+      <div class="content-container">
+        <div class="question">Can I bring in the feedback I already have?</div>
+        <div class="answer">
+          Yes. Upload a CSV or connect a tool and Celadon reads the full
+          history, not only what arrives from today. Most teams import a few
+          years on the first afternoon.
+        </div>
+      </div>
+
+      <div class="content-container">
+        <!-- Question 2 -->
+        <div class="question">How accurate is the automatic theming?</div>
+        <div class="answer">
+          Around 94 percent of items land in a theme without anyone touching
+          them. The rest sit in a review queue, and every grouping can be split,
+          merged or renamed by hand.
+        </div>
+      </div>
+
+      <div class="content-container">
+        <!-- Question 3 -->
+        <div class="question">Does it write to my issue tracker?</div>
+        <div class="answer">
+          It does. Push a theme to Linear or Jira and the issue carries the
+          summary and a link back. When the issue closes, Celadon marks the
+          theme shipped and queues the replies.
+        </div>
+      </div>
+
+      <div class="content-container">
+        <!-- Question 4 -->
+        <div class="question">What happens when the trial ends?</div>
+        <div class="answer">
+          The workspace goes read only. Nothing is deleted, and you can export
+          everything as CSV or JSON at any point, including after you leave.
+        </div>
+      </div>
+
+      <div class="content-container">
+        <!-- Question 5 -->
+        <div class="question">Is customer data used to train models?</div>
+        <div class="answer">
+          No. Your feedback is processed to build your themes and nothing else.
+          Data stays in the region you pick at setup, and the Scale plan adds an
+          audit log of every read.
+        </div>
+      </div>
+
+      <div class="content-container">
+        <!-- Question 6 -->
+        <div class="question">We are two people. Is this too much tool?</div>
+        <div class="answer">
+          Small teams get the most out of the loop closing, since there is
+          nobody spare to chase old threads. Start on Solo and move up only when
+          the item count says so.
+        </div>
+      </div>
+    </section>
+    <section
+      id="faq"
+      class="accordion max-md:w-full! md:hidden flex flex-col items-center justify-center max-md:p-4!"
+    >
+      <div class="accordion-label">QUESTIONS</div>
+      <div class="accordion-title max-md:text-3xl! max-md:mb-5!">
+        <h1>Asked often enough to put here.</h1>
+      </div>
+
+      <div class="content-container max-md:px-4! max-md:py-1!">
+        <div class="question max-md:py-4! max-md:pr-10! max-md:text-[17px]!">
+          Can I bring in the feedback I already have?
+        </div>
+        <div class="answer max-md:text-[15px]! max-md:in-[.active]:h-[170px]!">
+          Yes. Upload a CSV or connect a tool and Celadon reads the full
+          history, not only what arrives from today. Most teams import a few
+          years on the first afternoon.
+        </div>
+      </div>
+
+      <div class="content-container max-md:px-4! max-md:py-1!">
+        <!-- Question 2 -->
+        <div class="question max-md:py-4! max-md:pr-10! max-md:text-[17px]!">
+          How accurate is the automatic theming?
+        </div>
+        <div class="answer max-md:text-[15px]! max-md:in-[.active]:h-[170px]!">
+          Around 94 percent of items land in a theme without anyone touching
+          them. The rest sit in a review queue, and every grouping can be split,
+          merged or renamed by hand
+        </div>
+      </div>
+
+      <div class="content-container max-md:px-4! max-md:py-1!">
+        <!-- Question 3 -->
+        <div class="question max-md:py-4! max-md:pr-10! max-md:text-[17px]!">
+          Does it write to my issue tracker?
+        </div>
+        <div class="answer max-md:text-[15px]! max-md:in-[.active]:h-[170px]!">
+          It does. Push a theme to Linear or Jira and the issue carries the
+          summary and a link back. When the issue closes, Celadon marks the
+          theme shipped and queues the replies.
+        </div>
+      </div>
+
+      <div class="content-container max-md:px-4! max-md:py-1!">
+        <!-- Question 4 -->
+        <div class="question max-md:py-4! max-md:pr-10! max-md:text-[17px]!">
+          What happens when the trial ends?
+        </div>
+        <div class="answer max-md:text-[15px]! max-md:in-[.active]:h-[170px]!">
+          The workspace goes read only. Nothing is deleted, and you can export
+          everything as CSV or JSON at any point, including after you leave.
+        </div>
+      </div>
+
+      <div class="content-container max-md:px-4! max-md:py-1!">
+        <!-- Question 5 -->
+        <div class="question max-md:py-4! max-md:pr-10! max-md:text-[17px]!">
+          Is customer data used to train models?
+        </div>
+        <div class="answer max-md:text-[15px]! max-md:in-[.active]:h-[170px]!">
+          No. Your feedback is processed to build your themes and nothing else.
+          Data stays in the region you pick at setup, and the Scale plan adds an
+          audit log of every read.
+        </div>
+      </div>
+
+      <div class="content-container max-md:px-4! max-md:py-1!">
+        <!-- Question 6 -->
+        <div class="question max-md:py-4! max-md:pr-10! max-md:text-[17px]!">
+          We are two people. Is this too much tool?
+        </div>
+        <div class="answer max-md:text-[15px]! max-md:in-[.active]:h-[170px]!">
+          Small teams get the most out of the loop closing, since there is
+          nobody spare to chase old threads. Start on Solo and move up only when
+          the item count says so.
+        </div>
+      </div>
+    </section>
+
+    <!--  FOOTER -->
+    <footer class="mx-auto max-w-6xl px-4 mt-8 pb-7">
+      <div
+        class="card flex flex-col items-center justify-between gap-4 rounded-3xl px-8 py-6 md:flex-row md:rounded-full"
+      >
+        <p class="grey-text text-sm">© 2026 Celadon. A free HTML template.</p>
+
+        <div class="flex items-center gap-3 text-sm">
+          <span class="grey-text">Design by</span>
+          <a href="" class="white-box rounded-full px-4 py-2">Coden.io</a>
+          <a href="" class="white-box rounded-full px-4 py-2">......</a>
+        </div>
+      </div>
+    </footer>
+
+    <!--BACK TO TOP BUTTON-->
+
+    <a
+      href="#"
+      aria-label="Back to top"
+      class="white-box fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full text-xl"
+    >
+      ↑
+    </a>
+    <script src="./script.js"></script>
+  </body>
+</html>
